@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" 
+          type="image/png" 
+          href="./assets/icon-3.png">
         <title>Planets and moons</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     </head>
     <body>
         <style>
@@ -12,7 +16,26 @@
               padding: 0;
               overflow: hidden;
             }
+            .author {
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              bottom: 0;
+              color: white;
+              font-weight: 900;
+              font-family: 'Montserrat', sans-serif;
+            }
+            @media(max-width: 450px) {
+              .author, .author span {
+                font-size: 10px;
+              }
+            }
         </style>
+        <p class="author">Made with <span style="color: red; font-size: 24px;">&hearts;</span> by <em>Chirayu Joshi</em></p>
+        <iframe src="bgmusic.ogg" allow="autoplay" id="audio" style="display: none"></iframe>
+        <audio id="player" autoplay loop>
+          <source src="./assets/bgmusic.ogg" type="audio/ogg">
+        </audio>
         <div id="webgl"></div>
         <script src="js/dat.gui.min.js"></script>
         <script src="js/three.js"></script>

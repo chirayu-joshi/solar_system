@@ -11,7 +11,7 @@ var marsData = constructPlanetData(686.93, 0.015, 227*R, "mars", "img/mars.jpeg"
 var jupiterData = constructPlanetData(4330.6, 0.03, 778*R, "jupiter", "img/jupiter.jpg", 10.97, planetSegments);
 var saturnData = constructPlanetData(10767, 0.038, 1497*R, "saturn", "img/saturn.jpg", 9.14, planetSegments);
 var uranusData = constructPlanetData(30687, 0.0188, 2964*R, "uranus", "img/uranus.jpg", 3.51, planetSegments);
-var neptuneData = constructPlanetData(60182, 0.0214, 4477*R, "neptune", "img/neptune", 3.86, planetSegments);
+var neptuneData = constructPlanetData(60182, 0.0214, 4477*R, "neptune", "img/neptune.jpg", 3.86, planetSegments);
 var plutoData = constructPlanetData(90520, 0.0023, 5906*R, "pluto", "img/pluto.jpeg", 0.19, planetSegments);
 var orbitData = {value: 200, runOrbit: true, runRotation: true};
 var clock = new THREE.Clock();
@@ -324,9 +324,9 @@ function init() {
             1, // near clipping plane
             100000 // far clipping plane
             );
-    camera.position.z = 100;
-    camera.position.x = -100;
-    camera.position.y = 100;
+    camera.position.z = 120;
+    camera.position.x = -120;
+    camera.position.y = 120;
     camera.lookAt(new THREE.Vector3(0, 0, 0));
 
     // Create the scene that holds all of the visible objects.
